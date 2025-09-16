@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내일 비와?</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>내일 비와?</h1>
+        </header>
+        
+        <main class="dashboard">
+            <div class="weather-card">
+                <div class="loading" id="loading">
+                    <div class="spinner"></div>
+                    <p>날씨 정보를 가져오는 중...</p>
+                </div>
+                
+                <div class="weather-content" id="weather-content" style="display: none;">
+                    <div class="weather-icon">
+                        <img id="weather-image" src="" alt="날씨 아이콘">
+                    </div>
+                    
+                    <!-- 날씨 아이콘 바로 밑에 날씨 알림 표시 -->
+                    <div class="rain-alert" id="rain-alert" style="display: none;">
+                        <h1 class="rain-text">비 와</h1>
+                    </div>
+                    
+                    <div class="snow-alert" id="snow-alert" style="display: none;">
+                        <h1 class="snow-text">눈 와</h1>
+                    </div>
+                    
+                    <div class="no-rain-alert" id="no-rain-alert" style="display: none;">
+                        <h1 class="no-rain-text">안 와</h1>
+                    </div>
+                    
+                    <div class="weather-info">
+                        <div class="weather-description">
+                            <h2 id="weather-title"></h2>
+                            <p id="weather-details"></p>
+                        </div>
+                        
+                        <div class="temperature">
+                            <span id="temperature"></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="error-message" id="error-message" style="display: none;">
+                    <p>날씨 정보를 가져올 수 없습니다. 잠시 후 다시 시도해주세요.</p>
+                </div>
+            </div>
+            
+            <div class="bottom-info">
+                <div class="current-time">
+                    <p id="current-time"></p>
+                </div>
+                <div class="location-info">
+                    <p id="location"></p>
+                </div>
+            </div>
+        </main>
+        
+        <!-- 애드센스 광고 영역 -->
+        <div class="ad-container">
+            <div class="ad-label">광고</div>
+            <!-- Google AdSense 광고 코드를 여기에 삽입하세요 -->
+            <div class="ad-placeholder">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXX"
+                     crossorigin="anonymous"></script>
+                <!-- 날씨 대시보드 하단 광고 -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-XXXXXXXXX"
+                     data-ad-slot="XXXXXXXXX"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+                
+                <!-- 데모용 플레이스홀더 (실제 사용시 제거) -->
+                <div class="demo-ad">
+                    <p>Google AdSense 광고</p>
+                    <small>실제 광고 코드로 교체하세요</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
